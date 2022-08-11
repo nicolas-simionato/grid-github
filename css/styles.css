@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
+
+/*estilos index*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(243, 234, 222);
+    font-size: 0.5rem;
+}
+
+.mainIndex{
+    height: 100vh;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    grid-template-areas: 
+    "caja1"
+    "img1"
+    "caja2"
+    "img2";
+
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.caja1{
+    grid-area: caja1;
+}
+
+.img1{
+    grid-area: img1;
+}
+.caja2{
+    grid-area: caja2;
+}
+.img2{
+    grid-area: img2;
+}
+header {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid rgb(15, 1, 1);
+    position: sticky;
+    top: 0px;
+    backdrop-filter: blur(6px);
+}
+
+header nav ul{
+    display: flex;
+    column-gap: 0.4rem;
+    font-size: 1.1rem;
+}
+
+header nav ul li{
+    list-style: none;
+    background-color: rgb(243, 252, 252);
+    border-radius: 4px;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 10rem;
+    height: 15rem;
+}
+
+.logo{
+    width: 5rem;
+    height: 5rem;
+    display: none;
+}
+
+.wp{
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/*estilos productos*/
+
+.mainProductos{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    grid-template-areas: 
+    "materas"
+    "mates"
+    "termos"
+    "bombillas";
+
+    justify-content: center;
+    margin-top: 3rem;
+    row-gap: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.materas{
+    grid-template-areas: materas;
+}
+
+.mates{
+    grid-template-areas: mates;
+}
+
+.termos{
+    grid-template-areas: termos;
+}
+
+.bombillas{
+    grid-template-areas: bombillas;
+}
+
+.comprar{
+    background-color: rgb(228, 168, 228);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.imgProductos{
+    height: 8rem;
+    width: 10rem;
+}
+
+/*medias queries */
+
+@media screen and (min-width:600px){
+
+    /*medias queries index*/
+    .mainIndex{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+    
+        grid-template-areas: 
+        "caja1 caja2"
+        "img1 img2";
+
+        align-items: center;
+        column-gap: 1rem;
+    }
+    .imgProductos{
+        width: 20rem;
+        height: 25rem;
+    }
+
+    .mainIndex{
+        font-size: 1.2rem;
+    }
+
+    header nav ul{
+        column-gap: 0.7rem;
+        font-size: 2rem;
+        
+    }
+
+    footer{
+        font-size: 1.5rem;
+    }
+
+
+/*medias queries productos*/
+
+.mainProductos{
+    grid-template-areas: 
+    "materas mates"
+    "termos bombillas";
+    gap: 5rem;
+    margin-bottom: 20rem;
+    }
+}
+
+@media screen and (min-width:1024px){
+
+    /*medias queries index*/
+    .logo{
+        display: block;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    /*medias queries productos*/
+
+    .mainProductos{
+        grid-template-areas: 
+    "materas mates termos bombillas";
+    gap: 5rem;
+    }
+    
+    .imgProductos{
+        width: 15rem;
+        height: 18rem;
+    }
+}
+
