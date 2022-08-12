@@ -58,17 +58,21 @@ header nav ul{
     display: flex;
     column-gap: 0.4rem;
     font-size: 1.1rem;
+
 }
 
 header nav ul li{
     list-style: none;
     background-color: rgb(243, 252, 252);
     border-radius: 4px;
+
 }
 
-li{
-    list-style: none;
+header nav ul li :hover{
+    background-color: rgb(248, 248, 104)
 }
+
+
 
 img{
     width: 10rem;
@@ -116,24 +120,29 @@ footer{
 
 .materas{
     grid-template-areas: materas;
+    
 }
 
 .mates{
     grid-template-areas: mates;
+    
 }
 
 .termos{
     grid-template-areas: termos;
+    
 }
 
 .bombillas{
     grid-template-areas: bombillas;
+    
 }
 
 .comprar{
     background-color: rgb(228, 168, 228);
     border-radius: 10px;
     margin-top: 10px;
+    
 }
 
 .imgProductos{
